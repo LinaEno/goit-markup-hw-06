@@ -468,10 +468,12 @@ body {
 }
 
 .form-input {
+  padding-left: 42px;
   width: 448px;
   height: 40px;
   border: 1px solid var(--input-field);
   border-radius: 4px;
+  color: var(--black-color);
 }
 
 .form-field {
@@ -489,6 +491,14 @@ body {
   line-height: 1.2;
   letter-spacing: 0.01em;
   color: var(--first-text-color);
+}
+
+.form-input:focus + .icon-form {
+  color: var(--accent-color);
+}
+
+.icon-form {
+  color: currentColor;
 }
 
 .icon-form {
