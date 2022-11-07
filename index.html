@@ -422,8 +422,8 @@
         <div class="join footer-social">
           <p class="title-footer">Підпишіться на розсилку</p>
           <form class="form-footer" >
-            <label>
-              <input type="email" name="">
+            <label class="mail-footer-label">
+              <input type="email" name="mail" class="mail-footer" placeholder="E-mail">
             </label>
             <div class="button-footer">
               <button type="submit" class="footer-button" >Підписатися
@@ -468,8 +468,14 @@
                 </svg>
               </div>
               <div class="comment form-field">
-                <label class="form-label">Коментар
-                <textarea name="feedback" placeholder="Введіть текст"></textarea>
+                <label for="feedback" class="form-label">Коментар</label>
+                <textarea name="feedback" id="feedback" placeholder="Введіть текст" class="feedback"></textarea>
+              </div>
+              <div class="form-field">
+                <label class="label-check">
+                <input type="checkbox" name="agree" class="checkbox">
+                <span class="modal-checkbox"></span>
+                Погоджуюся з розсилкою та приймаю <a href="" class="modal-link">Умови договору</a>
                 </label>
               </div>
             </form>
