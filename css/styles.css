@@ -451,15 +451,16 @@ body {
   border: 1px solid var(--color-border-email);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  outline: none;
   font-size: 16px;
   line-height: 1.3px;
   letter-spacing: 0.03em;
   color: var(--color-email-place);
   background-color: var(--accent-background-color);
+  transition: border var(--time) var(--cubic);
 }
 
-.mail-footer:focus,
-.mail-footer:active {
+.mail-footer:focus {
   border: 1px solid var(--accent-color);
   border-radius: 4px;
 }
@@ -515,6 +516,17 @@ body {
   height: 30px;
   border: 1px solid var(--modal-button-border);
   border-radius: 50%;
+  color: var(--black-color);
+  transition: color var(--time) var(--cubic);
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  color: var(--accent-color);
+}
+
+.icon-modal {
+  fill: currentColor;
 }
 
 .form-all {
@@ -540,11 +552,14 @@ body {
   border: 1px solid var(--input-field);
   border-radius: 4px;
   color: var(--black-color);
+  outline: none;
+  transition: border var(--time) var(--cubic);
 }
 
 .form-field {
   position: relative;
   margin-bottom: 28px;
+  color: var(--second-text-color);
 }
 
 .form-label {
@@ -563,18 +578,12 @@ body {
   border-color: var(--accent-color);
 }
 
-.form-input:focus + .icon-form {
+/*.form-input:focus + .icon-form {
   color: var(--accent-color);
-  border-color: var(--accent-color);
-}
+}*/
 
-.form-field:focus-within > .icon-form {
+.form-field:focus > .icon-form {
   color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-.icon-form {
-  color: currentColor;
 }
 
 .icon-form {
@@ -582,15 +591,23 @@ body {
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
+  color: currentColor;
 }
 
 .feedback {
   display: block;
+  font: inherit;
   width: 100%;
   height: 120px;
   resize: none;
   border: 1px solid var(--input-field);
   border-radius: 4px;
+  outline: none;
+  transition: border var(--time) var(--cubic);
+}
+
+.feedback:focus {
+  border-color: var(--accent-color);
 }
 
 .checkbox {
@@ -613,6 +630,9 @@ body {
   height: 15px;
   border: 1px solid var(--black-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color:transparent;
+  transition: border var(--time) var(--cubic),
+  background-color var(--time) var(--cubic);
 }
 
 .modal-link {
@@ -621,7 +641,7 @@ body {
 
 .checkbox:checked + .modal-checkbox {
   background-image: url(../images/check.svg);
-  border-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
   background-color: var(--accent-color);
   background-size: contain;
   background-origin: border-box;
